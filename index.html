@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github issues tracker</title>
+    <link rel="stylesheet" href="">
+     <!--font awesome-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!--tailwind+daisyui-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <!--stylesheet-->
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body>
+    <!-- ===== LOGIN PAGE ===== -->
+   <section id="login-page" class="min-h-screen flex justify-center items-center">
+
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 justify-center ">
+          <img class="mx-auto" src="assets/github-logo.png" alt="">
+  <h2  class="justify-center text-center">GitHub Issues Tracker</h2>
+  <p class="justify-center text-center text-gray-400">Sign in to manage your issues</p>
+  <legend class="fieldset-legend">Login</legend>
+
+  <label class="label">Email</label>
+  <input  type="email"id="username-input" class="input" placeholder="Email" />
+ <label class="label text-purple-500">Default: admin</label>
+  <label class="label">Password</label>
+  <input type="password" id="password-input"  class="input" placeholder="Password" />
+    <label class="label text-purple-500">Default: admin123</label>
+  <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+  <button class="btn">OR</button>
+  <p class="justify-center text-center text-gray-400">Demo Credentials:</p>
+  <p class="justify-center text-center">Username: admin</p>
+  <p class="justify-center text-center">
+Password: admin123</p>
+</fieldset>
+   </section>
+   <!-- ===== MAIN APP ===== -->
+    <section id="main-app" class="hidden">
+    <section>
+    <div class="navbar bg-base-100 shadow-sm">
+  <div class="flex items-center gap-2">
+         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="assets/github-logo.png"/>
+            
+        </div>
+       
+      </div>
+      <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
+  </div>
+  <div class="flex gap-2 ml-auto">
+    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    <div class="dropdown dropdown-end">
+ 
+    <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i>Primary</button>
+    </div>
+  </div>
+</div>
+    </section>
+<section class="max-w-screen-xl mx-auto px-4 ">
+       <div class="navbar bg-base-100 shadow-sm gap-2 mb-5">
+        <button id="all-issues"class="btn btn-active btn-primary">All</button>
+      <button id="open-issues"  class="btn btn-soft"><span id="open-count" class="badge badge-success">
+0</span>Open</button>
+      <button  id="closed-issues"  class="btn btn-soft">closed<span id="closed-count" class="badge badge-error">
+0
+</span></button>
+     </div>  
+    
+   </section>
+   <section class="max-w-screen-xl mx-auto px-4 ">
+       <div class="navbar bg-base-100 shadow-sm">
+  <div class="flex items-center gap-2">
+         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="assets/Aperture.png">
+            
+        </div>
+       
+      </div>
+      <div>
+      <h2 class="text-xl font-bold">50 Issues</h2>
+      <p class=" text-gray-400">Track and manage your project issues</p>
+        </div>
+  </div>
+        <div class="flex gap-2 ml-auto">
+     <button class="btn btn-soft"> <img src="assets/Open-Status.png" alt="">Open</button>
+ 
+    <button class="btn btn-soft"> <img src="assets/Closed- Status .png" alt="">Closed</button>
+    </div>
+  </div>
+       
+    </div>
+   </section>
+  <section
+id="issues-container"
+class="max-w-screen-xl mx-auto px-4 py-5
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+</section>
+  <script src="script/index,.js"></script>  
+</body>
+</html>
