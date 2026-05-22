@@ -57,10 +57,10 @@ Password: admin123</p>
       <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
   </div>
   <div class="flex gap-2 ml-auto">
-    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+<input id="input-search" type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
     <div class="dropdown dropdown-end">
  
-    <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i>Primary</button>
+    <button id="btn-search" class="btn btn-primary"> <i class="fa-solid fa-plus"></i>Primary</button>
     </div>
   </div>
 </div>
@@ -108,6 +108,33 @@ class="max-w-screen-xl mx-auto px-4 py-5
 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
 </section>
+<!-- ===== ISSUE DETAILS MODAL ===== -->
+
+<dialog id="issue-modal"
+class="modal modal-bottom sm:modal-middle">
+
+  <div class="modal-box rounded-2xl">
+
+    <div id="modal-details"
+    class="space-y-4">
+
+    </div>
+
+    <div class="modal-action">
+
+      <form method="dialog">
+
+        <button class="btn btn-primary">
+          Close
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</dialog>
   <script src="script/index,.js"></script>  
 </body>
 </html>
