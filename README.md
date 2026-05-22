@@ -1,128 +1,51 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
 
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+## 1️⃣ What is the difference between var, let, and const?
 
+- **var** → Function-scoped variable. Can be re-declared and updated. Not recommended in modern JavaScript.
+- **let** → Block-scoped variable. Can be updated but cannot be re-declared in the same scope.
+- **const** → Block-scoped variable. Cannot be updated or re-declared.
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
+👉 Summary:
+- var = old & unsafe  
+- let = changeable  
+- const = fixed value  
 
 ---
 
-## 📝 Main Requirements
+## 2️⃣ What is the spread operator (...)?  
 
-## 🎨 Design Part
+The spread operator (`...`) is used to expand elements of an array or object.
 
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
+✔ Example:
+```js
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];
 
-## Main Page: 
+console.log(arr2);
+## 3️⃣ Difference between map(), filter(), and forEach()
 
-### Navbar: 
+- **map()** → Creates a new array by modifying each element
+- **filter()** → Returns a new array based on a condition
+- **forEach()** → Loops through elements but does not return a new array
 
-- Navbar with website logo/name on the left
-- Search input and button on the right
+✔ Example:
+```js
+[1,2,3].map(x => x * 2);      // [2,4,6]
+[1,2,3].filter(x => x > 1);   // [2,3]
+[1,2,3].forEach(x => console.log(x));
+## 4️⃣ What is an arrow function?
 
-### Tab Section like Figma: 
+An arrow function is a shorter and modern way to write functions in JavaScript.
 
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
+✔ Example:
+```js
+const add = (a, b) => a + b;
+## 5️⃣ What are template literals?
 
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
+Template literals are a modern way to write strings in JavaScript using backticks (`` ` ``) instead of quotes.
 
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
-
-
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
-
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
-
-
+✔ Example:
+```js
+let name = "John";
+console.log(`Hello ${name}`);
